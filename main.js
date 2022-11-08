@@ -56,3 +56,34 @@ else if( age < 18){
 else if(age == 18){
   console.log('Report to the registration desk');
 }
+
+
+Scope
+const satellite = 'The Moon';
+const galaxy = 'The Milky Way';
+const stars = 'North Star';
+
+const callMyNightSky = () => {                  //Concise body
+	return 'Night Sky: ' + satellite + ', ' + stars + ', and ' + galaxy;
+};
+
+console.log(callMyNightSky());
+
+
+
+//Nested for loop
+
+let bobsFollowers = ['Joe', 'Marta', 'Sam', 'Erin'];
+let tinasFollowers = ['Sam', 'Marta', 'Elle'];
+let mutualFollowers = [];
+
+for (let i = 0; i < bobsFollowers.length; i++) {
+  for (let j = 0; j < tinasFollowers.length; j++) {
+    if (bobsFollowers[i] === tinasFollowers[j]) {
+      mutualFollowers.push(bobsFollowers[i]);
+    }
+  }
+};
+
+
+
