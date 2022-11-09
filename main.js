@@ -145,3 +145,63 @@ console.log("And if you don't know, now you know.");
 //For each method
 const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
 fruits.forEach(fruit => console.log(`I want to eat a ${fruit}`));
+
+
+//Map method
+const animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich', 'Whale', 'octopus', 'rabbit', 'lion', 'dog'];
+
+const secretMessage = animals.map(animal => {      //Returns the first character in the string
+      return animal[0];
+});
+console.log(secretMessage.join(''));
+
+const bigNumbers = [100, 200, 300, 400, 500];
+
+const smalllNumbers = bigNumbers.map(bigNumber => {    //DIvides the number by 100
+        return bigNumber / 100;
+})
+
+
+//Filter method
+const randomNumbers = [375, 200, 3.14, 7, 13, 852];
+
+const smallNumbers = randomNumbers.filter(randomNumber => {    //Returns numbers that are less than 250 in a new array
+  return randomNumber < 250;
+})
+
+
+const favoriteWords = ['nostalgia', 'hyperbole', 'fervent', 'esoteric', 'serene'];
+
+const longFavoriteWords = favoriteWords.filter(favoriteWord => {       //Returns the strings in the array that have more than seven characters
+        return favoriteWord.length > 7;
+})
+
+
+//Find index method - Finds the location of an element in an array
+const animalls = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
+
+const foundAnimal = animals.findIndex(animal => {
+    return animal === 'elephant'
+})
+
+const startsWithS = animals.findIndex(animal => {
+    return animal[0] === 's';
+})
+
+
+//Reduce method
+const newNumbers = [1, 3, 5, 7];
+
+const newSum = newNumbers.reduce((accumulator, currentValue) => {
+  console.log('The value of accumulator: ', accumulator);
+  console.log('The value of currentValue: ', currentValue);
+  return accumulator + currentValue;
+}, 10);
+
+console.log(newSum);
+
+// //.forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.
+// .map() executes the same code on every element in an array and returns a new array with the updated elements.
+// .filter() checks every element in an array to see if it meets certain criteria and returns a new array with the elements that return truthy for the criteria.
+// .findIndex() returns the index of the first element of an array that satisfies a condition in the callback function. It returns -1 if none of the elements in the array satisfies the condition.
+// .reduce() iterates through an array and takes the values of the elements and returns a single value.
